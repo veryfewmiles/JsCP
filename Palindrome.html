@@ -2,20 +2,57 @@
 <html>
 
 <head>
+    <style>
+    body{
+        background-color: aqua;
+        font-family: Arial,  sans-serif;
+        padding-top:190px;
+    }
+    h1{
+        color:dodgerblue;
+        margin-bottom:20px;
+        
+    }
+    .box{
+        background-color: #ffffff;
+        width:400px;
+        margin: auto;
+        padding:30px;
+        border-radius:12px;
+        border-top:5px solid #6c9bcf;
+        box-shadow: 0 4px 12px rgba(108, 155, 207, 0.2);
+    }
+    #result{
+        background-color: darkcyan;
+        color:darkmagenta;
+        padding:12px;
+        border-radius:8px;
+        font-size: 18px;
+        font-family:Georgia, serif;
+        font-style: italic;
+    }
+    </style>
 </head>
 
 <body>
-
+    <div class="box">
+        
+<h1>
+    Palindrome
+</h1>
+<div id ="result">
+</div>  
+</div>
     <script>
 
         function palindrome(myString) {
             var input = myString.replace(/[^A-Z0-9]/ig, "").toLowerCase();
             var reversedInput = input.split('').reverse().join('');
             if (input === reversedInput) {
-                document.write("<div>" + myString + " is a palindrome <div>")
+                document.getElementById("result").innerHTML = myString + " is a palindrome";
             }
             else {
-                document.write("<div>" + myString + " is not a palindrome <div>")
+                document.getElementById("result").innerHTML = myString + " is not a palindrome";
             }
         }
 
