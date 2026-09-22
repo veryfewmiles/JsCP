@@ -7,9 +7,9 @@
     <div class ="wrapper">
         <h1>StopWatch</h1>
         <p><span id ="seconds">00</span>:<span id ="millieseconds">00</span></p>
-        <button id = "button-start">Start</button>
-        <button id="button-stop">Stop</button>
-        <button id="button-reset">Reset</button>
+        <button id = "button-Start">Start</button>
+        <button id="button-Stop">Stop</button>
+        <button id="button-Reset">Reset</button>
     </div>
     <script>
       window.onload = function () {
@@ -17,9 +17,9 @@
         var millieseconds = 00;
         var appendmillieseconds = document.getElementById("millieseconds");
         var appendseconds = document.getElementById("seconds");
-        var buttonStart = document.getElementById("button-start");
-        var buttonStop = document.getElementById("button-stop");
-        var buttonReset = document.getElementById("button-reset");
+        var buttonStart = document.getElementById("button-Start");
+        var buttonStop = document.getElementById("button-Stop");
+        var buttonReset = document.getElementById("button-Reset");
         var Interval ;
 
         buttonStart.onclick = function() {
@@ -42,7 +42,7 @@
         function startTimer() {
             millieseconds++;
 
-            if(milliseconds <=9){
+            if(millieseconds <=9){
                 appendmillieseconds.innerHTML = "0" + millieseconds;
             }
 
@@ -57,7 +57,7 @@
                 appendmillieseconds.innerHTML = "0" + 0;
             }
             if (seconds > 9) {
-                appendSeconds.innerHTML = seconds;
+                appendseconds.innerHTML = seconds;
             }
         }
         }  
